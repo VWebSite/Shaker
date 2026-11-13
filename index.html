@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاكر بن فهيد | مدير الموارد البشرية</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#060F1E',
+                            800: '#0B192C',
+                            700: '#1E3E62',
+                            600: '#2A4D75',
+                        },
+                        gold: {
+                            300: '#FFE57F',
+                            400: '#F4CE14',
+                            500: '#E5B80B',
+                            600: '#C59B27',
+                            700: '#A07D1C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: radial-gradient(circle at top right, #1E3E62 0%, #0B192C 50%, #060F1E 100%);
+            min-height: 100vh;
+        }
+        .glass-panel {
+            background: rgba(11, 25, 44, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(229, 184, 11, 0.25);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(229, 184, 11, 0.08);
+            border-color: rgba(229, 184, 11, 0.4);
+            transform: translateY(-3px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #FFF176 0%, #E5B80B 50%, #C59B27 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #FFF9D2 0%, #F4CE14 50%, #C59B27 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 35px rgba(229, 184, 11, 0.2);
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(229, 184, 11, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(229, 184, 11, 0.6); }
+        }
+        .active-glow {
+            animation: pulseGlow 3s infinite;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B192C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E5B80B;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="text-white py-6 px-4 sm:p-8 flex items-center justify-center">
+
+    <!-- Main Container Wrapper -->
+    <div class="w-full max-w-xl mx-auto glass-panel rounded-3xl p-5 sm:p-8 shadow-2xl glow-effect relative overflow-hidden">
+
+        <!-- Ambient Background Glow Accents -->
+        <div class="absolute -top-32 -right-32 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-navy-600/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Profile Hero Section -->
+        <div class="text-center flex flex-col items-center mb-6 pt-2">
+            <div class="relative mb-4 group">
+                <div class="absolute -inset-1 gold-gradient rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500 active-glow"></div>
+                <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-gold-400 shadow-2xl bg-navy-800">
+                    <img src="face.jpeg" alt="شاكر بن فهيد" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/300x300/1E3E62/E5B80B?text=شاكر+بن+فهيد'">
+                </div>
+            </div>
+
+            <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white mb-1.5 flex items-center justify-center gap-2">
+                <span>شاكر بن فهيد</span>
+                <i class="fa-solid fa-circle-check text-gold-400 text-lg" title="حساب معتمد"></i>
+            </h1>
+            <p class="text-gold-400 font-bold text-base sm:text-lg mb-1">مدير الموارد البشرية</p>
+            <p class="text-gray-300 text-xs sm:text-sm flex items-center justify-center gap-1.5 bg-white/5 px-3 py-1 rounded-full border border-white/10 mt-1">
+                <i class="fa-solid fa-building-columns text-gold-500"></i>
+                <span>مؤسسة الكفاءة العالمية</span>
+            </p>
+        </div>
+
+        <!-- OVERVIEW & QUICK ACTIONS -->
+        <div id="tab-overview" class="space-y-4 tab-content">
+            <!-- Contact Information Cards (Stacked & Separated) -->
+            <div class="space-y-3">
+                <!-- Phone Box -->
+                <div class="glass-card rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div class="flex items-center gap-3.5 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-gray-400 block mb-0.5">رقم الجوال الشخصي</span>
+                            <span dir="ltr" class="text-sm sm:text-base font-bold text-white tracking-wider">+966 55 342 4164</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto justify-end border-t sm:border-t-0 pt-2 sm:pt-0 border-white/10">
+                        <button onclick="copyToClipboard('+966553424164', 'تم نسخ رقم الجوال')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-gold-500/20 text-gray-300 hover:text-gold-400 transition text-xs font-semibold flex items-center gap-1.5" title="نسخ الرقم">
+                            <i class="fa-solid fa-copy"></i>
+                            <span>نسخ</span>
+                        </button>
+                        <a href="tel:+966553424164" class="px-4 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500 text-emerald-400 hover:text-white transition text-xs font-semibold flex items-center gap-1.5" title="اتصال مباشر">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <span>اتصال</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Email Box -->
+                <div class="glass-card rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div class="flex items-center gap-3.5 w-full sm:w-auto overflow-hidden">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="text-right truncate">
+                            <span class="text-xs text-gray-400 block mb-0.5">البريد الإلكتروني الرسمي</span>
+                            <span class="text-sm sm:text-base font-bold text-white truncate block tracking-wide">shakerfuhaid@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto justify-end border-t sm:border-t-0 pt-2 sm:pt-0 border-white/10 shrink-0">
+                        <button onclick="copyToClipboard('shakerfuhaid@gmail.com', 'تم نسخ البريد الإلكتروني')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-gold-500/20 text-gray-300 hover:text-gold-400 transition text-xs font-semibold flex items-center gap-1.5" title="نسخ البريد">
+                            <i class="fa-solid fa-copy"></i>
+                            <span>نسخ</span>
+                        </button>
+                        <a href="mailto:shakerfuhaid@gmail.com" class="px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500 text-amber-400 hover:text-white transition text-xs font-semibold flex items-center gap-1.5" title="إرسال إيميل">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>إرسال</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Primary Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-2">
+                <a href="https://wa.me/966553424164" target="_blank" rel="noopener noreferrer" class="glass-card flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-white font-bold text-sm bg-gradient-to-r from-emerald-600/40 to-green-600/40 hover:from-emerald-600 hover:to-green-600 transition-all shadow-lg group">
+                    <i class="fa-brands fa-whatsapp text-lg text-emerald-400 group-hover:text-white"></i>
+                    <span>مراسلة واتساب</span>
+                </a>
+
+                <button onclick="downloadVCard()" class="gold-gradient text-navy-900 font-black py-3.5 px-4 rounded-xl shadow-lg hover:opacity-95 transition-all flex items-center justify-center gap-2 text-sm transform active:scale-95">
+                    <i class="fa-solid fa-address-book"></i>
+                    <span>حفظ جهة الاتصال</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Elegant Toast Notification Popup -->
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 bg-navy-800 border border-gold-400/50 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 z-50 backdrop-blur-xl">
+        <div id="toast-icon" class="text-gold-400 text-lg">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <span id="toast-message" class="text-xs sm:text-sm font-medium">تمت العملية بنجاح</span>
+    </div>
+
+    <!-- JavaScript Interactive Logic -->
+    <script>
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            const toastIcon = document.getElementById('toast-icon');
+
+            toastMessage.textContent = message;
+            if (type === 'success') {
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-check text-gold-400"></i>';
+            } else {
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-info text-blue-400"></i>';
+            }
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3500);
+        }
+
+        function copyToClipboard(text, successMsg) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(successMsg);
+                }).catch(() => {
+                    fallbackCopy(text, successMsg);
+                });
+            } else {
+                fallbackCopy(text, successMsg);
+            }
+        }
+
+        function fallbackCopy(text, successMsg) {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.style.position = "fixed";
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast(successMsg);
+            } catch (err) {
+                showToast('تعذر النسخ تلقائياً', 'info');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function downloadVCard() {
+            const vcard = 
+`BEGIN:VCARD
+VERSION:3.0
+FN:شاكر بن فهيد
+TITLE:مدير الموارد البشرية
+ORG:مؤسسة الكفاءة العالمية
+TEL:+966553424164
+EMAIL:shakerfuhaid@gmail.com
+END:VCARD`;
+
+            const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Shaker_Bin_Fuhaid_HR.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            showToast('تم تحميل ملف جهة الاتصال (vCard) بنجاح');
+        }
+    </script>
+</body>
+</html>
